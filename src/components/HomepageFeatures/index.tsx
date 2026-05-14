@@ -72,13 +72,13 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Built in Indonesia',
+    title: 'Open source from day 1',
     icon: Globe,
     description: (
       <>
-        Solo-built in Indonesia — open source under BUSL-1.1, transitions to
-        permissive after the Change Date. 1-second blocks, 0.0001 SRX min fee,
-        5,000 tx per block.
+        BUSL-1.1 today, transitions to a permissive license after the Change
+        Date. 1-second blocks, 0.0001 SRX min fee, 5,000 tx per block. All
+        consensus + storage code public.
       </>
     ),
   },
