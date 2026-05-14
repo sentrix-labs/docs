@@ -20,6 +20,13 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
+  // Force `.md` files through the commonmark parser instead of MDX so
+  // raw `<placeholder>` tags inside operator runbooks (e.g.
+  // `sentrix-<your-name>`, `<strong-passphrase>`) don't trip MDX-strict
+  // parsing. Docusaurus 3 makes `.md` MDX by default; we don't use any
+  // MDX features in these docs, so commonmark is the safe fit.
+  markdown: { format: 'md' },
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -30,7 +37,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          path: '../docs',
+          path: './docs',
           // Skip files that are GitHub-specific (folder README) — Docusaurus
           // would otherwise try to render docs/README.md at the same route
           // as src/pages/index.tsx (the marketing homepage).
