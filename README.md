@@ -83,7 +83,7 @@ Configures GitHub Pages serving from `gh-pages` branch.
 
 ## Brand
 
-- Tagline: **"Where real assets live."**
+- Tagline: **"Open source EVM L1 in Rust."**
 - Primary positioning: locked-in 2026-04-26 (internal brand-positioning doc)
 - Logo source: [github.com/sentrix-labs/brand-kit](https://github.com/sentrix-labs/brand-kit)
 
