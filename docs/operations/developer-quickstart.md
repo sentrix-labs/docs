@@ -158,8 +158,8 @@ Sentrix uses EIP-1559:
 
 ## Next Steps
 
-- [Smart Contract Guide](SMART_CONTRACT_GUIDE.md) — full Remix walkthrough
-- [MetaMask Setup](METAMASK.md) — step-by-step with screenshots
-- [API Reference](API_REFERENCE.md) — all REST + RPC endpoints
-- [Network Info](NETWORKS.md) — mainnet vs testnet config
-- [Validator Guide](VALIDATOR_GUIDE.md) — run your own node
+- [Smart Contract Guide](smart-contract-guide.md) — full Remix walkthrough
+- [MetaMask Setup](metamask.md) — step-by-step with screenshots
+- [API Reference](api-reference.md) — all REST + RPC endpoints
+- [Network Info](networks.md) — mainnet vs testnet config
+- [Validator Guide](validator-guide.md) — run your own node

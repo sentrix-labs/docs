@@ -104,7 +104,7 @@ Consensus fork. Re-targets emission curve: 4-year halving (126M blocks) + 315M c
 ### Incident (2026-04-26 evening)
 - Rolling restart for env-var loading triggered auto-jail divergence on mainnet. Foundation+Beacon thought one validator jailed; Treasury+Core didn't. Active-set divergence tripped P1 BFT safety gate. Chain stalled at h=633599.
 - **Recovery:** halt-all + chain.db rsync from Treasury (canonical) + simultaneous start. MD5 parity confirmed.
-- **Lesson:** rolling restart on mainnet has same jail-cascade pattern as testnet. For env-var changes, halt-all + simultaneous-start is safer. Documented in EMERGENCY_ROLLBACK.md.
+- **Lesson:** rolling restart on mainnet has same jail-cascade pattern as testnet. For env-var changes, halt-all + simultaneous-start is safer. Documented in emergency-rollback.md.
 
 ---
 
@@ -158,17 +158,17 @@ Single-night marathon (PRs #316–#331; binaries v2.1.31 → v2.1.36). All 4 mai
 ### Added
 - **V4 reward distribution v2** active since h=590100. Coinbase 1 SRX/block routes to `PROTOCOL_TREASURY` (`0x0000…0002`) escrow; validators + delegators claim via `StakingOp::ClaimRewards` (no-amount staking op with apply-time treasury credit). Stake-weighted delegator share supported, slashing applies to `pending_rewards` before claim.
 - **`tools/claim-rewards/`** — standalone Cargo binary. Reads 64-hex privkey from stdin, queries pending via `/staking/validators`, builds + submits ClaimRewards tx. Proven end-to-end on Core validator.
-- **`docs/operations/CLAIM_REWARDS.md`** — operator guide (mechanism diagrams, query/submit/verify procedure, failure modes).
+- **`docs/operations/claim-rewards.md`** — operator guide (mechanism diagrams, query/submit/verify procedure, failure modes).
 - **`/staking/validators`** JSON-RPC field `pending_rewards` per validator.
 - **`SwarmCommand::GetConnectedPeers`** + `LibP2pHandle::connected_peers()` — used by L1 dial-tick to skip already-connected peers.
 - **`connection_limits::Behaviour`** in libp2p swarm (`max_established_per_peer = 2`, env-overridable). Caps connection accumulation between validator pairs.
 - **L1 multiaddr `/p2p/<peer_id>` suffix** — appended to validator advert multiaddrs so receiving validators can extract `peer_id` for `dial_known()` short-circuit.
 - **Frontier Phase F-2 shadow-mode wiring** (`SENTRIX_FRONTIER_F2_SHADOW=1`) — `build_batches` observer in `apply_block_pass2`, read-only.
 - **BFT signing v2 Phase 1 foundation** — `signing_payload_for_height(...)` dispatch helper + low-S enforcement scaffold (Phase 2 call-site refactor pending dedicated session).
-- **`docs/roadmap/PHASE3.md`** — Frontier roadmap (F-1✅, F-2✅, F-3 → F-10 pending; ~6-8 weeks calendar).
+- **`docs/roadmap/phase3.md`** — Frontier roadmap (F-1✅, F-2✅, F-3 → F-10 pending; ~6-8 weeks calendar).
 
 ### Changed
-- **PHASE2.md rewritten** from "Planned" to "ACTIVE on mainnet since 2026-04-25" — three pillars (DPoS + BFT + EVM), V4 reward subsystem, network hardening summary.
+- **phase2.md rewritten** from "Planned" to "ACTIVE on mainnet since 2026-04-25" — three pillars (DPoS + BFT + EVM), V4 reward subsystem, network hardening summary.
 - **Voyager dispatch is now runtime-aware** — `Blockchain::voyager_mode_for(&self, height)` ORs env `VOYAGER_FORK_HEIGHT` with chain.db `voyager_activated`. Production callsites in `block_executor.rs` (validate_block + EVM tx check) + `jsonrpc/sentrix.rs` (getValidatorSet + getFinalizedHeight) migrated. Closes the env-var-default-`u64::MAX` foot-gun that caused validate_block to fall into Pioneer auth post-restart.
 - **Mempool tx validation** exempts staking ops from `amount > 0` check (alongside existing token-op + EVM-tx exemptions). Allows ClaimRewards (`amount=0`, `to=PROTOCOL_TREASURY`).
 - **Bootstrap-peers symmetric on all 4 systemd units** — each validator now lists all 3 others in `--peers`. Post-restart mesh self-heals without parallel-restart recovery.
@@ -200,7 +200,7 @@ Pivotal release: mainnet hard-fork from Pioneer (PoA round-robin) to Voyager (DP
 - **Frontier Phase F-1 type scaffold** (`AccountKey`, `TxAccess`, `Batch`, `derive_access`, `build_batches` stubs).
 
 ### Changed
-- WHITEPAPER bumped to v3.2 with new §2.5 Voyager DPoS+BFT design + §2.6 L1/L2 peer auto-discovery sections.
+- WHITEPAPER bumped to v3.2 with new §2.5 Voyager DPoS+BFT design + §2.6 L1/l2 peer auto-discovery sections.
 - `SENTRIX_FORCE_PIONEER_MODE` removed from all env files.
 - Internal operator runbooks trimmed to ~25 incident-earned rules.
 
@@ -219,7 +219,7 @@ Pioneer release. v1.0.0 tagged and published.
 
 Highlights since 0.1.0:
 - 7 validators across 3 VPS, full mesh peering
-- CI/CD pipeline deploying to all 3 VPS with ordered stop/start and health checks
+- CI/cd pipeline deploying to all 3 VPS with ordered stop/start and health checks
 - P0 security hardening: libp2p peer limits, per-IP rate limiting, legacy TCP deprecated (PR #82)
 - Full documentation suite: 20 files (PR #83)
 - P2P upgrades: bincode wire protocol, Kademlia DHT discovery, gossipsub propagation
@@ -245,13 +245,13 @@ Tokens: SRC-20 standard — deploy, transfer, burn, mint, approve/transferFrom. 
 
 Network: libp2p (TCP + Noise XX + Yamux). Persistent Ed25519 identity. Auto-reconnect. Per-IP rate limiting (5/60s, 5-min ban). Max 50 peers. Incremental sync with sled persistence. Block processing in spawned tasks.
 
-API: 25+ REST endpoints. 20 JSON-RPC methods (Ethereum-compatible). 12-page block explorer. Rate limiting (60/min/IP). Constant-time API key comparison. CORS restrictive. 500 concurrency, 1 MiB body, 100 batch.
+API: 25+ REST endpoints. 20 JSON-RPC methods (Ethereum-compatible). 12-page block explorer. Rate limiting (60/min/ip). Constant-time API key comparison. CORS restrictive. 500 concurrency, 1 MiB body, 100 batch.
 
 Wallet: secp256k1 keygen, Keccak-256 addresses. AES-256-GCM keystore. Argon2id v2 KDF (backward-compat PBKDF2 v1). Zeroize on drop.
 
 Storage: sled embedded DB. Per-block persistence + hash index. 1000-block sliding window.
 
-Infra: 17 CLI commands. CI/CD (cargo deny → clippy → build → test → 3-VPS deploy). 4-phase deploy with health check. Branch protection.
+Infra: 17 CLI commands. CI/cd (cargo deny → clippy → build → test → 3-VPS deploy). 4-phase deploy with health check. Branch protection.
 
 Security: zero `unsafe` blocks. No-panic CI enforcement. Checked arithmetic.
 
@@ -271,7 +271,7 @@ Security: zero `unsafe` blocks. No-panic CI enforcement. Checked arithmetic.
 | #69 | Idle timeout fix |
 | #72–#73 | Security V8+V9 |
 | #74 | Public repo cleanup |
-| #79 | H1/H2 fork fix |
-| #80 | CI/CD deploy order fix |
+| #79 | H1/h2 fork fix |
+| #80 | CI/cd deploy order fix |
 | #81 | Core node + 3-VPS pipeline |
 | #82 | P0 security hardening |

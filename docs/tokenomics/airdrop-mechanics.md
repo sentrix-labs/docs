@@ -155,7 +155,7 @@ Quarter-level targets follow tokenomics §6. Specific dates within each quarter 
 
 ## Cross-references
 
-- [`OVERVIEW.md`](OVERVIEW.md) — full tokenomics (supply curve, premine, halving)
-- [`docs/GOVERNANCE.md`](../GOVERNANCE.md) — multisig spending model
-- [`docs/security/AUDIT_SUMMARY.md`](../security/AUDIT_SUMMARY.md) — chain audit posture
+- [`overview.md`](overview.md) — full tokenomics (supply curve, premine, halving)
+- [`docs/governance.md`](../governance.md) — multisig spending model
+- [`docs/security/audit-summary.md`](../security/audit-summary.md) — chain audit posture
 - Canonical contracts (incl. future `MerkleAirdrop.sol`): [`sentrix-labs/canonical-contracts`](https://github.com/sentrix-labs/canonical-contracts)

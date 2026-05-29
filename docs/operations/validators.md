@@ -6,7 +6,7 @@ time target is `1 s` (mainnet observed ~1–2 s, testnet ~1 s). Block producer a
 active_set.len()]`.
 
 > [!NOTE]
-> **To run your own validator:** see **[VALIDATOR_ONBOARDING.md](./VALIDATOR_ONBOARDING.md)** —
+> **To run your own validator:** see **[validator-onboarding.md](./validator-onboarding.md)** —
 > permissionless since 2026-04-25 (Voyager activation), candidate cap
 > lifted in v2.2.11 (2026-05-13).
 
@@ -43,7 +43,7 @@ mainnet's current registry.)
 ## Add a validator (permissionless path, current)
 
 Submit `StakingOp::RegisterValidator` from your wallet — the tx is its
-own admission proof. See **[VALIDATOR_ONBOARDING.md §8](./VALIDATOR_ONBOARDING.md#8-register-as-a-validator-permissionless)**
+own admission proof. See **[validator-onboarding.md §8](./validator-onboarding.md#8-register-as-a-validator-permissionless)**
 for the full flow.
 
 ```text
@@ -141,8 +141,8 @@ curl -H "X-API-Key: <key>" https://rpc.sentrixchain.com/admin/log
 
 ## See also
 
-- **[VALIDATOR_ONBOARDING.md](./VALIDATOR_ONBOARDING.md)** — full validator setup walkthrough
-- **[VALIDATOR_GUIDE.md](./VALIDATOR_GUIDE.md)** — cheat-sheet quickstart
-- **[../tokenomics/STAKING.md](../tokenomics/STAKING.md)** — staking + delegation + reward mechanics
-- **[CLAIM_REWARDS.md](./CLAIM_REWARDS.md)** — claim accrued rewards (post-V4 fork)
-- **[MONITORING.md](./MONITORING.md)** — Prometheus + journald setup
+- **[validator-onboarding.md](./validator-onboarding.md)** — full validator setup walkthrough
+- **[validator-guide.md](./validator-guide.md)** — cheat-sheet quickstart
+- **[../tokenomics/staking.md](../tokenomics/staking.md)** — staking + delegation + reward mechanics
+- **[claim-rewards.md](./claim-rewards.md)** — claim accrued rewards (post-V4 fork)
+- **[monitoring.md](./monitoring.md)** — Prometheus + journald setup

@@ -2,7 +2,7 @@
 
 Code recipes for integrating Sentrix Chain into a dApp, indexer, or backend. Sentrix is EVM-compatible (chain ID `7119` mainnet / `7120` testnet) and works with the standard Ethereum tooling — `viem`, `wagmi`, `ethers`, `hardhat`, `foundry`. This page collects the snippets so you can copy-paste against the canonical RPC URLs without hand-rolling the chain config.
 
-For UI-only walkthroughs (MetaMask + Remix), see [DEVELOPER_QUICKSTART.md](DEVELOPER_QUICKSTART.md) and [SMART_CONTRACT_GUIDE.md](SMART_CONTRACT_GUIDE.md). For native-side integration (REST, gRPC, WebSocket), see [API_REFERENCE.md](API_REFERENCE.md) and [GRPC.md](GRPC.md).
+For UI-only walkthroughs (MetaMask + Remix), see [developer-quickstart.md](developer-quickstart.md) and [smart-contract-guide.md](smart-contract-guide.md). For native-side integration (REST, gRPC, WebSocket), see [api-reference.md](api-reference.md) and [grpc.md](grpc.md).
 
 ## Network reference
 
@@ -206,7 +206,7 @@ EVM-only dApps generally do not need a Sentrix SDK — `viem` or `ethers` is eno
 
 ## WebSocket subscriptions
 
-Sentrix exposes both standard `eth_subscribe` channels and Sentrix-specific `sentrix_subscribe` channels (`sentrix_finalized`, `sentrix_validatorSet`, `sentrix_tokenOps`, `sentrix_stakingOps`, `sentrix_jail`). See [WEBSOCKET_SUBSCRIPTIONS.md](WEBSOCKET_SUBSCRIPTIONS.md) for the full channel catalog.
+Sentrix exposes both standard `eth_subscribe` channels and Sentrix-specific `sentrix_subscribe` channels (`sentrix_finalized`, `sentrix_validatorSet`, `sentrix_tokenOps`, `sentrix_stakingOps`, `sentrix_jail`). See [websocket-subscriptions.md](websocket-subscriptions.md) for the full channel catalog.
 
 Quick sample with viem:
 
@@ -233,12 +233,12 @@ const unwatch = client.watchBlocks({
 
 ## Where to go next
 
-- **Deploy a contract end-to-end (UI flow)** — [SMART_CONTRACT_GUIDE.md](SMART_CONTRACT_GUIDE.md)
-- **Verify a deployed contract** — [CONTRACT_VERIFICATION.md](CONTRACT_VERIFICATION.md)
-- **Stream finalised blocks over gRPC** — [GRPC.md](GRPC.md)
-- **Query native REST endpoints** — [API_ENDPOINTS.md](API_ENDPOINTS.md), [API_REFERENCE.md](API_REFERENCE.md)
-- **Listen to BFT / staking events** — [WEBSOCKET_SUBSCRIPTIONS.md](WEBSOCKET_SUBSCRIPTIONS.md)
-- **Run your own RPC node** — [VALIDATOR_ONBOARDING.md](VALIDATOR_ONBOARDING.md) (the fullnode shape lives in the same binary)
+- **Deploy a contract end-to-end (UI flow)** — [smart-contract-guide.md](smart-contract-guide.md)
+- **Verify a deployed contract** — [contract-verification.md](contract-verification.md)
+- **Stream finalised blocks over gRPC** — [grpc.md](grpc.md)
+- **Query native REST endpoints** — [api-endpoints.md](api-endpoints.md), [api-reference.md](api-reference.md)
+- **Listen to BFT / staking events** — [websocket-subscriptions.md](websocket-subscriptions.md)
+- **Run your own RPC node** — [validator-onboarding.md](validator-onboarding.md) (the fullnode shape lives in the same binary)
 
 ## See also
 

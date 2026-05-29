@@ -55,7 +55,7 @@ Height not moving for 30+ seconds.
 
 **Cold-start gate held:** Post-restart, validators wait for `peer_count >= active_set.len() - 1` (= ≥3 for 4-validator mesh) before entering BFT. If logs show "L2 cold-start gate: BFT activation blocked", verify systemd `--peers` arg lists ALL 3 other validators.
 
-**State divergence at fork boundary:** All 4 validators should agree on block hashes at any specific height. If `/chain/blocks/<height>` returns different hashes across peers, recovery is chain.db rsync from canonical (see EMERGENCY_ROLLBACK.md § State Recovery).
+**State divergence at fork boundary:** All 4 validators should agree on block hashes at any specific height. If `/chain/blocks/<height>` returns different hashes across peers, recovery is chain.db rsync from canonical (see emergency-rollback.md § State Recovery).
 
 ### Jail-state divergence (Voyager-specific)
 
@@ -63,7 +63,7 @@ Height not moving for 30+ seconds.
 
 **Cause:** Per-validator slashing module's auto-jail counts missed proposals locally with timing-dependent increment. Sequential rolling restart causes the validator currently in its propose slot to miss the slot during its down-window. Whether peers count this miss inconsistently depends on observation timing → divergent local jail state.
 
-**Recovery (~15 min):** Halt all 4 simultaneously, forensic backup divergent chain.db on each, tar-pipe canonical chain.db (one with majority signer-set view) → others, MD5 parity confirm, simultaneous start. See EMERGENCY_ROLLBACK.md § Worked Example #2 (h=633599 stall, 2026-04-26 evening).
+**Recovery (~15 min):** Halt all 4 simultaneously, forensic backup divergent chain.db on each, tar-pipe canonical chain.db (one with majority signer-set view) → others, MD5 parity confirm, simultaneous start. See emergency-rollback.md § Worked Example #2 (h=633599 stall, 2026-04-26 evening).
 
 **Prevention:** **NEVER use rolling sequential restart on mainnet** for env-var changes or restarts where consensus rules don't change between old/new state. Use halt-all + simultaneous-start. Same pattern was previously documented for testnet (2026-04-20 incident); 2026-04-26 evening confirmed it on mainnet.
 
@@ -77,13 +77,13 @@ Validator received blocks but isn't applying them. Look for:
 
 ### Fork (different block hashes at same height)
 
-`/chain/blocks/<height>` returns different `hash` across peers. Recovery: chain.db rsync from canonical (see EMERGENCY_ROLLBACK.md § State Recovery for full procedure). 2026-04-26 morning incident (h=604547, 4-way state divergence) is a worked example — RCA held in operator runbooks.
+`/chain/blocks/<height>` returns different `hash` across peers. Recovery: chain.db rsync from canonical (see emergency-rollback.md § State Recovery for full procedure). 2026-04-26 morning incident (h=604547, 4-way state divergence) is a worked example — RCA held in operator runbooks.
 
 ### Node won't start
 
 **"Address already in use":** `lsof -i :8545` or `ss -tlnp | grep 8545`
 
-**"Binary locked" (Windows):** `taskkill //F //IM sentrix.exe`
+**"Binary locked" (Windows):** `taskkill //F //im sentrix.exe`
 
 **"Permission denied":** `chmod +x /opt/sentrix/sentrix`
 

@@ -10,14 +10,14 @@ Sentrix is an open-source, EVM-compatible Layer-1 built in Rust. Real chain, rea
 
 ## Quick Links
 
-- 🚀 **Getting Started** — [Architecture Overview](architecture/OVERVIEW)
-- 💻 **Build dApps** — [Smart Contract Guide](operations/SMART_CONTRACT_GUIDE) · [Developer Quickstart](operations/DEVELOPER_QUICKSTART)
-- 🦊 **Connect MetaMask** — [Network Config](operations/METAMASK)
-- 🔗 **API Reference** — [REST + JSON-RPC Endpoints](operations/API_ENDPOINTS) · [WebSocket Subscriptions](operations/WEBSOCKET_SUBSCRIPTIONS)
-- ⚙️ **Run a Node** — [Validator Guide](operations/VALIDATOR_GUIDE)
-- 🪙 **Tokenomics** — [Overview](tokenomics/OVERVIEW) · [SRX](tokenomics/SRX) · [Staking](tokenomics/STAKING) · [Reward Escrow](tokenomics/REWARD_ESCROW) · [SRC-20 Standard](tokenomics/TOKEN_STANDARDS)
-- 🛡️ **Security** — [Multi-sig & Authority](security/MULTISIG) · [Audit Reports](security/SECURITY_AUDIT_V11)
-- 📡 **Operations** — [Mainnet Observability](operations/OBSERVABILITY) · [Validator Onboarding](operations/VALIDATOR_ONBOARDING)
+- 🚀 **Getting Started** — [Architecture Overview](architecture/overview)
+- 💻 **Build dApps** — [Smart Contract Guide](operations/smart-contract-guide) · [Developer Quickstart](operations/developer-quickstart)
+- 🦊 **Connect MetaMask** — [Network Config](operations/metamask)
+- 🔗 **API Reference** — [REST + JSON-RPC Endpoints](operations/api-endpoints) · [WebSocket Subscriptions](operations/websocket-subscriptions)
+- ⚙️ **Run a Node** — [Validator Guide](operations/validator-guide)
+- 🪙 **Tokenomics** — [Overview](tokenomics/overview) · [SRX](tokenomics/srx) · [Staking](tokenomics/staking) · [Reward Escrow](tokenomics/reward-escrow) · [SRC-20 Standard](tokenomics/token-standards)
+- 🛡️ **Security** — [Multi-sig & Authority](security/multisig) · [Audit Reports](security/security-audit-v11)
+- 📡 **Operations** — [Mainnet Observability](operations/observability) · [Validator Onboarding](operations/validator-onboarding)
 
 ## Network at a glance
 
@@ -41,7 +41,7 @@ Sentrix runs as a 14-crate Rust workspace with MDBX-backed state, libp2p network
 | Role | Channel |
 |---|---|
 | **Builders** | [builders@sentrixchain.com](mailto:builders@sentrixchain.com) · [GitHub](https://github.com/sentrix-labs) |
-| **Validators** | [validators@sentrixchain.com](mailto:validators@sentrixchain.com) · [Validator Guide](operations/VALIDATOR_GUIDE) |
+| **Validators** | [validators@sentrixchain.com](mailto:validators@sentrixchain.com) · [Validator Guide](operations/validator-guide) |
 | **Partners** | [partners@sentriscloud.com](mailto:partners@sentriscloud.com) |
 | **Press** | [press@sentriscloud.com](mailto:press@sentriscloud.com) |
 | **Grants** | [grants@sentrixchain.com](mailto:grants@sentrixchain.com) |

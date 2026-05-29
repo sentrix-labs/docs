@@ -44,4 +44,4 @@ Done. Live in production.
 
 ## What's Next
 
-Next up: Voyager (DPoS + BFT + EVM). See [PHASE2.md](PHASE2.md).
+Next up: Voyager (DPoS + BFT + EVM). See [phase2.md](phase2.md).

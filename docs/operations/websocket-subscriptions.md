@@ -164,7 +164,7 @@ wscat -c wss://rpc.sentrixchain.com/ws
 
 ## See also
 
-- [API Reference](./API_REFERENCE) — HTTP JSON-RPC + REST surface
+- [API Reference](./api-reference) — HTTP JSON-RPC + REST surface
 - [SDK packages](https://github.com/sentrix-labs) — `@sentrix/sdk-js` (when published)
 - ethers.js [WebSocketProvider docs](https://docs.ethers.org/v6/api/providers/#WebSocketProvider) — works as-is against Sentrix
 - viem [webSocket transport](https://viem.sh/docs/clients/transports/websocket) — same

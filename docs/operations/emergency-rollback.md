@@ -93,7 +93,7 @@ The 2026-04-25 / 2026-04-26 incident hotfix series:
 When state has diverged (different block hash at the same height,
 state_root mismatch, etc.), the canonical recovery is a **frozen
 rsync** of `chain.db` from a healthy peer with **all** validators
-halted. See [STATE_EXPORT.md](STATE_EXPORT.md) for why
+halted. See [state-export.md](state-export.md) for why
 `sentrix state export/import` is **not** the right path for a
 post-genesis chain.
 
@@ -156,7 +156,7 @@ and the divergence is gone.
 
 ## NEVER Do This
 
-- **Never `git push --force` to roll back.** The CI/CD deploy job is
+- **Never `git push --force` to roll back.** The CI/cd deploy job is
   disabled — a force-push to main does **not** redeploy. Re-run your
   deploy with `SENTRIX_ROLLBACK=<archived-binary-path>` instead.
   Force-push also rewrites public history; CI test artifacts and

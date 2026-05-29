@@ -3,7 +3,7 @@
 > [!NOTE]
 > Run a Sentrix validator in 5 minutes. The full onboarding doc with
 > hardware sizing, recovery procedures, FAQ, and chain comparison
-> lives at **[VALIDATOR_ONBOARDING.md](./VALIDATOR_ONBOARDING.md)**.
+> lives at **[validator-onboarding.md](./validator-onboarding.md)**.
 
 ## Quickstart
 
@@ -110,7 +110,7 @@ curl -s https://rpc.sentrixchain.com/staking/validators \
 > Today: bond ≥15,000 SRX and submit `StakingOp::RegisterValidator`.
 > No email, no DM, no admin co-sign.
 
-See [§8 of the onboarding doc](./VALIDATOR_ONBOARDING.md#8-register-as-a-validator-permissionless)
+See [§8 of the onboarding doc](./validator-onboarding.md#8-register-as-a-validator-permissionless)
 for the exact tx format.
 
 ## Monitoring essentials
@@ -157,9 +157,9 @@ Alert on:
 
 ## See also
 
-- **[VALIDATOR_ONBOARDING.md](./VALIDATOR_ONBOARDING.md)** — full deep guide (hardware, recovery, FAQ, chain comparison)
-- **[VALIDATORS.md](./VALIDATORS.md)** — current active set
-- **[../tokenomics/STAKING.md](../tokenomics/STAKING.md)** — staking + delegation + reward mechanics
-- **[CLAIM_REWARDS.md](./CLAIM_REWARDS.md)** — post-V4-fork reward claim flow
-- **[MONITORING.md](./MONITORING.md)** — Prometheus + Grafana setup
-- **[`SECURITY.md`](https://github.com/sentrix-labs/sentrix/blob/main/SECURITY.md)** — vulnerability disclosure policy
+- **[validator-onboarding.md](./validator-onboarding.md)** — full deep guide (hardware, recovery, FAQ, chain comparison)
+- **[validators.md](./validators.md)** — current active set
+- **[../tokenomics/staking.md](../tokenomics/staking.md)** — staking + delegation + reward mechanics
+- **[claim-rewards.md](./claim-rewards.md)** — post-V4-fork reward claim flow
+- **[monitoring.md](./monitoring.md)** — Prometheus + Grafana setup
+- **[`security.md`](https://github.com/sentrix-labs/sentrix/blob/main/security.md)** — vulnerability disclosure policy

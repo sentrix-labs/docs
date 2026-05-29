@@ -129,7 +129,7 @@ If an operator notices a wrong amount, wrong recipient, or proposed-under-coerci
 
 ## See also
 
-- [`canonical-contracts/docs/ADDRESSES.md`](https://github.com/sentrix-labs/canonical-contracts/blob/main/docs/ADDRESSES.md) — deployed addresses + ownership migration tx hashes
+- [`canonical-contracts/docs/addresses.md`](https://github.com/sentrix-labs/canonical-contracts/blob/main/docs/addresses.md) — deployed addresses + ownership migration tx hashes
 - [`canonical-contracts/contracts/SentrixSafe.sol`](https://github.com/sentrix-labs/canonical-contracts/blob/main/contracts/SentrixSafe.sol) — multisig contract source
 - [`canonical-contracts/contracts/StrategicReserveTimelock.sol`](https://github.com/sentrix-labs/canonical-contracts/blob/main/contracts/StrategicReserveTimelock.sol) — timelock contract source (Reserve migration target)
-- [Tokenomics > Governance](../tokenomics/OVERVIEW#8-governance) — broader governance roadmap
+- [Tokenomics > Governance](../tokenomics/overview#8-governance) — broader governance roadmap

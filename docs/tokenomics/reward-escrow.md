@@ -72,6 +72,6 @@ The explorer (`scan.sentrixchain.com`) labels these addresses as "Protocol Treas
 
 ## See also
 
-- [Tokenomics Overview](./OVERVIEW) — full SRX economic model
-- [Staking](./STAKING) — Voyager DPoS reward distribution
-- [Claim Rewards](../operations/CLAIM_REWARDS) — operator runbook for draining the escrow
+- [Tokenomics Overview](./overview) — full SRX economic model
+- [Staking](./staking) — Voyager DPoS reward distribution
+- [Claim Rewards](../operations/claim-rewards) — operator runbook for draining the escrow
