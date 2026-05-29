@@ -94,27 +94,27 @@ const config: Config = {
         {
           title: 'Build',
           items: [
-            {label: 'Quickstart', to: '/operations/DEVELOPER_QUICKSTART'},
-            {label: 'Smart Contracts', to: '/operations/SMART_CONTRACT_GUIDE'},
-            {label: 'API Reference', to: '/operations/API_ENDPOINTS'},
-            {label: 'MetaMask Setup', to: '/operations/METAMASK'},
+            {label: 'Quickstart', to: '/operations/developer-quickstart'},
+            {label: 'Smart Contracts', to: '/operations/smart-contract-guide'},
+            {label: 'API Reference', to: '/operations/api-endpoints'},
+            {label: 'MetaMask Setup', to: '/operations/metamask'},
           ],
         },
         {
           title: 'Operate',
           items: [
-            {label: 'Validator Guide', to: '/operations/VALIDATOR_GUIDE'},
-            {label: 'Networks', to: '/operations/NETWORKS'},
-            {label: 'Monitoring', to: '/operations/MONITORING'},
-            {label: 'Emergency Rollback', to: '/operations/EMERGENCY_ROLLBACK'},
+            {label: 'Validator Guide', to: '/operations/validator-guide'},
+            {label: 'Networks', to: '/operations/networks'},
+            {label: 'Monitoring', to: '/operations/monitoring'},
+            {label: 'Emergency Rollback', to: '/operations/emergency-rollback'},
           ],
         },
         {
           title: 'Tokenomics',
           items: [
-            {label: 'SRX', to: '/tokenomics/SRX'},
-            {label: 'Token Standards', to: '/tokenomics/TOKEN_STANDARDS'},
-            {label: 'Staking', to: '/tokenomics/STAKING'},
+            {label: 'SRX', to: '/tokenomics/srx'},
+            {label: 'Token Standards', to: '/tokenomics/token-standards'},
+            {label: 'Staking', to: '/tokenomics/staking'},
           ],
         },
         {

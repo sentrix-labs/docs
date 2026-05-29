@@ -16,13 +16,13 @@ Main gap is DoS resistance on the network layer (mostly addressed now).
 
 ## Code Audit
 
-Full report: [SECURITY_AUDIT_V11.md](SECURITY_AUDIT_V11.md)
+Full report: [security-audit-v11.md](security-audit-v11.md)
 
 The most recent code review surfaced 2 high-severity findings (fee tracking split, timestamp non-determinism — neither is fund-loss), both since fixed, plus a set of medium / low / informational findings tracked in the linked report.
 
 ## Attack Vectors
 
-Full report: [ATTACK_VECTORS.md](ATTACK_VECTORS.md)
+Full report: [attack-vectors.md](attack-vectors.md)
 
 13 vectors analyzed. HIGH+HIGH quadrant empty. Biggest real risk: block withholding (validator offline → chain stall). P0 network items all fixed.
 
@@ -30,7 +30,7 @@ Already solid: tx signing, double spend protection, mempool caps, rate limiting,
 
 ## Pentest
 
-Full report: [PENTEST_RESULTS.md](PENTEST_RESULTS.md)
+Full report: [pentest-results.md](pentest-results.md)
 
 Scenarios covered: RPC flood, P2P flood, tx spam, malformed input, double spend, oversized payloads. Methodology, raw output, and per-scenario verdicts in the linked report.
 

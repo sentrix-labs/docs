@@ -146,6 +146,6 @@ sudo systemctl stop sentrix-watchdog.timer
 ## See also
 
 - mainnet-watchdog runbook — see operator runbook (private)
-- [Monitoring](./MONITORING) — Prometheus + Grafana setup overview
-- [Emergency Rollback](./EMERGENCY_ROLLBACK) — when to restore from off-host backup
-- [Testnet Recovery](./TESTNET_RECOVERY) — testnet-only recovery patterns
+- [Monitoring](./monitoring) — Prometheus + Grafana setup overview
+- [Emergency Rollback](./emergency-rollback) — when to restore from off-host backup
+- [Testnet Recovery](./testnet-recovery) — testnet-only recovery patterns

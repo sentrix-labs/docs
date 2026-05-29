@@ -122,7 +122,7 @@ Sentrix-specific precompile addresses defined for future implementation:
 
 ## MetaMask Setup
 
-See [MetaMask Setup Guide](../operations/METAMASK.md) for screenshots and details.
+See [MetaMask Setup Guide](../operations/metamask.md) for screenshots and details.
 
 Quick add (testnet):
 

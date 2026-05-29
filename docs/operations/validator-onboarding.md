@@ -572,7 +572,7 @@ Alert before that:
 - Prometheus exporter exports the per-validator missed-count gauge
   (`sentrix_validator_missed_blocks_in_window`).
 - Grafana dashboard panel shows the trend — see
-  `OBSERVABILITY.md` for the JSON.
+  `observability.md` for the JSON.
 
 If you breach 0.85, find the cause (host CPU, disk, network) before
 0.70 fires.
@@ -628,7 +628,7 @@ active immediately on the next epoch tick.
 | Sourcify verifier | <https://verify.sentrixchain.com> |
 | gRPC + gRPC-Web | <https://grpc.sentrixchain.com> · <https://grpc-testnet.sentrixchain.com> |
 | GitHub issues | <https://github.com/sentrix-labs/sentrix/issues> |
-| Security advisories | `SECURITY.md` in repo root |
+| Security advisories | `security.md` in repo root |
 
 ---
 

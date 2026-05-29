@@ -145,7 +145,7 @@ For most dApp use cases, you don't need to deploy your own infrastructure contra
 - **TokenFactory** lets non-Solidity-experts deploy a token in one transaction, no copy-paste-deploy ritual needed
 - **SentrixSafe** is the same contract Sentrix's own treasury uses (currently 1-of-1, expansion-ready)
 
-For complete walkthrough — deploying via Hardhat / Foundry / wagmi / viem — see [`canonical-contracts/docs/INTEGRATION.md`](https://github.com/sentrix-labs/canonical-contracts/blob/main/docs/INTEGRATION.md).
+For complete walkthrough — deploying via Hardhat / Foundry / wagmi / viem — see [`canonical-contracts/docs/integration.md`](https://github.com/sentrix-labs/canonical-contracts/blob/main/docs/integration.md).
 
 ## Decimal Note
 
@@ -153,4 +153,4 @@ Native SRX uses **8 decimals** (1 SRX = 100,000,000 sentri). WSRX uses **18 deci
 
 ## Architecture
 
-For implementation details (revm version, account model, base fee burn, fork heights), see [docs/architecture/EVM.md](../architecture/EVM.md).
+For implementation details (revm version, account model, base fee burn, fork heights), see [docs/architecture/evm.md](../architecture/evm.md).

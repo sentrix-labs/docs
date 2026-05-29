@@ -95,7 +95,7 @@ Encoded in the `data` field as JSON:
 {"op": "approve",  "contract": "SRC20_...", "spender": "0x...", "amount": N}
 ```
 
-Still need SRX for gas. See [Token Standards](../tokenomics/TOKEN_STANDARDS.md).
+Still need SRX for gas. See [Token Standards](../tokenomics/token-standards.md).
 
 ## Overflow Protection
 

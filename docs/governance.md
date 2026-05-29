@@ -54,7 +54,7 @@ Why deploy multisig if effectively single-sig? Three reasons:
 - Mainnet: `addOwner(authority)` at block 755821 → `removeOwner(deployer)` at block 757829
 - Testnet: `addOwner(authority)` at block 881639 → `removeOwner(deployer)` at block 884599
 
-Tx hashes available in [`canonical-contracts/docs/ADDRESSES.md`](https://github.com/sentrix-labs/canonical-contracts/blob/main/docs/ADDRESSES.md).
+Tx hashes available in [`canonical-contracts/docs/addresses.md`](https://github.com/sentrix-labs/canonical-contracts/blob/main/docs/addresses.md).
 
 ### Multi-sig expansion (no committed timeline)
 
@@ -149,7 +149,7 @@ Every governance-relevant action is observable on `scan.sentrixchain.com`:
 - Validator set rotations (epoch-boundary events)
 - Fork activations (block-by-block constant-evaluation context)
 
-WebSocket subscriptions stream these events live (see [WebSocket Subscriptions](operations/WEBSOCKET_SUBSCRIPTIONS.md)).
+WebSocket subscriptions stream these events live (see [WebSocket Subscriptions](operations/websocket-subscriptions.md)).
 
 ### Operator response
 
@@ -180,8 +180,8 @@ The trajectory is intentional: bootstrap with concentrated control for safety + 
 
 ## 6. Cross-references
 
-- Tokenomics & supply: [`docs/tokenomics/OVERVIEW.md`](tokenomics/OVERVIEW.md)
-- Audit summary: [`docs/security/AUDIT_SUMMARY.md`](security/AUDIT_SUMMARY.md)
-- Airdrop mechanics: [`docs/tokenomics/AIRDROP_MECHANICS.md`](tokenomics/AIRDROP_MECHANICS.md)
+- Tokenomics & supply: [`docs/tokenomics/overview.md`](tokenomics/overview.md)
+- Audit summary: [`docs/security/audit-summary.md`](security/audit-summary.md)
+- Airdrop mechanics: [`docs/tokenomics/airdrop-mechanics.md`](tokenomics/airdrop-mechanics.md)
 - Canonical contracts (incl. SentrixSafe source): [`sentrix-labs/canonical-contracts`](https://github.com/sentrix-labs/canonical-contracts)
-- Multi-sig technical doc: [`docs/security/MULTISIG.md`](security/MULTISIG.md)
+- Multi-sig technical doc: [`docs/security/multisig.md`](security/multisig.md)

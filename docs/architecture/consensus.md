@@ -19,7 +19,7 @@ With 4 validators and 1s blocks, each one produces a block every 4 seconds (1s Ã
 > validator) after a Voyager DPoS+BFT activation attempt at
 > h=557244 livelocked. The Voyager fork height is parked at
 > `u64::MAX` until V2 BFT wiring (issue #292) lands. See
-> [EMERGENCY_ROLLBACK](../operations/EMERGENCY_ROLLBACK.md).
+> [EMERGENCY_ROLLBACK](../operations/emergency-rollback.md).
 
 ## Block Production
 
@@ -83,4 +83,4 @@ block.timestamp <= now + 15s             (not too far ahead)
 
 ## Voyager
 
-Replaces PoA with DPoS: open registration (15K SRX stake), top 100 by stake, BFT finality (2/3+ votes), slashing. See [Voyager](../roadmap/PHASE2.md).
+Replaces PoA with DPoS: open registration (15K SRX stake), top 100 by stake, BFT finality (2/3+ votes), slashing. See [Voyager](../roadmap/phase2.md).

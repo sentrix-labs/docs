@@ -56,7 +56,7 @@ Why:
 - Slashing applies to `pending_rewards` before claim — misbehavior reduces accumulated reward, not yet-paid balance
 - Audit trail visible via `/staking/validators` JSON-RPC
 
-See [docs/operations/CLAIM_REWARDS.md](../operations/CLAIM_REWARDS.md) for the operator guide.
+See [docs/operations/claim-rewards.md](../operations/claim-rewards.md) for the operator guide.
 
 ## Network Hardening
 
@@ -82,4 +82,4 @@ The 2026-04-25 / 2026-04-26 marathon shipped substantial network hardening along
 
 ## What's Next: Frontier
 
-See [PHASE3.md](./PHASE3.md). Frontier targets parallel transaction execution + sub-1s block time + ecosystem expansion via mainnet hard fork. Phase F-1 type scaffold + F-2 shadow-mode wiring already in main; F-3 onward (real parallel apply) ~6-8 weeks calendar.
+See [phase3.md](./phase3.md). Frontier targets parallel transaction execution + sub-1s block time + ecosystem expansion via mainnet hard fork. Phase F-1 type scaffold + F-2 shadow-mode wiring already in main; F-3 onward (real parallel apply) ~6-8 weeks calendar.

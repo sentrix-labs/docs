@@ -80,7 +80,7 @@ Pre-fork (h \< 640,800) used 42M-block halving with a 210M cap. Fork was activat
 
 ### Reward routing post-V4-fork
 
-Since `VOYAGER_REWARD_V2_HEIGHT=590100` (2026-04-25), block reward (1 SRX) routes to PROTOCOL_TREASURY escrow instead of directly to the proposer's balance. Validators + delegators drain via `StakingOp::ClaimRewards`. See [Reward Escrow](./REWARD_ESCROW) for the sentinel address explainer.
+Since `VOYAGER_REWARD_V2_HEIGHT=590100` (2026-04-25), block reward (1 SRX) routes to PROTOCOL_TREASURY escrow instead of directly to the proposer's balance. Validators + delegators drain via `StakingOp::ClaimRewards`. See [Reward Escrow](./reward-escrow) for the sentinel address explainer.
 
 Fee revenue (post split) still credits the validator immediately every block — only the 1 SRX block reward is escrowed.
 
@@ -131,7 +131,7 @@ Listing fee budget: 3M SRX from Strategic Reserve.
 | **Today (2026-04-28)** | SentrixSafe 1-of-1 on both chains | Authority `0xa25236925bc10954e0519731cc7ba97f4bb5714b` |
 | **Future (no committed timing)** | SentrixSafe N-of-M multi-sig — expansion to multiple signers when independent co-signers are recruited and onboarded | Authority + future co-signers |
 
-Migration history (2026-04-28): `addOwner(authority)` testnet block 881639 + mainnet block 755821; `removeOwner(deployer)` testnet block 884599 + mainnet block 757829. Bootstrap deployer EOA retired from Safe ownership. Tx hashes in [canonical-contracts ADDRESSES.md](https://github.com/sentrix-labs/canonical-contracts/blob/main/docs/ADDRESSES.md).
+Migration history (2026-04-28): `addOwner(authority)` testnet block 881639 + mainnet block 755821; `removeOwner(deployer)` testnet block 884599 + mainnet block 757829. Bootstrap deployer EOA retired from Safe ownership. Tx hashes in [canonical-contracts addresses.md](https://github.com/sentrix-labs/canonical-contracts/blob/main/docs/addresses.md).
 
 ## 9. Transparency commitments
 
@@ -141,7 +141,7 @@ Migration history (2026-04-28): `addOwner(authority)` testnet block 881639 + mai
 
 ## See also
 
-- [SRX](./SRX) — native coin units, supply, distribution
-- [Staking](./STAKING) — Voyager DPoS + reward distribution
-- [Token Standards](./TOKEN_STANDARDS) — SRC-20 native + ERC-20 via EVM
-- [Reward Escrow](./REWARD_ESCROW) — sentinel addresses + PROTOCOL_TREASURY explainer
+- [SRX](./srx) — native coin units, supply, distribution
+- [Staking](./staking) — Voyager DPoS + reward distribution
+- [Token Standards](./token-standards) — SRC-20 native + ERC-20 via EVM
+- [Reward Escrow](./reward-escrow) — sentinel addresses + PROTOCOL_TREASURY explainer

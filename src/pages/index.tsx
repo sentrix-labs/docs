@@ -23,12 +23,12 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/operations/DEVELOPER_QUICKSTART">
+            to="/operations/developer-quickstart">
             Developer Quickstart →
           </Link>
           <Link
             className="button button--outline button--secondary button--lg"
-            to="/operations/METAMASK">
+            to="/operations/metamask">
             Add to MetaMask
           </Link>
         </div>
