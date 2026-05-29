@@ -1,18 +1,17 @@
 # Domains
 
-All Sentrix services run under `sentriscloud.com`. DNS managed via Cloudflare.
+Sentrix protocol services run under `sentrixchain.com`. Product and application services run under `sentriscloud.com`. DNS is managed via Cloudflare.
 
 ## Services
 
 | Domain | What |
 |--------|------|
-| sentrix.sentriscloud.com | Landing page |
+| sentrixchain.com | Landing page |
 | scan.sentrixchain.com | Block explorer |
 | api.sentrixchain.com | REST API |
 | rpc.sentrixchain.com | Mainnet JSON-RPC |
 | testnet-rpc.sentrixchain.com | Testnet JSON-RPC |
-| sentrix-wallet.sentriscloud.com | Wallet UI |
-| sentrixlaunch.sentriscloud.com | Token launchpad |
+| solux.sentriscloud.com | Solux wallet |
 | coinblast.sentriscloud.com | CoinBlast |
 | faucet.sentrixchain.com | Testnet faucet |
 
@@ -22,7 +21,7 @@ All Sentrix services run under `sentriscloud.com`. DNS managed via Cloudflare.
 RPC:      https://rpc.sentrixchain.com
 API:      https://api.sentrixchain.com
 Explorer: https://scan.sentrixchain.com
-Wallet:   https://sentrix-wallet.sentriscloud.com
+Wallet:   https://solux.sentriscloud.com
 Faucet:   https://faucet.sentrixchain.com
 Chain ID: 7119
 ```
@@ -65,4 +64,3 @@ Symbol:   SRX
 
 - GitHub: https://github.com/sentrix-labs/sentrix
 - Telegram (announcements): https://t.me/SentrixChain
-- Telegram (community chat): https://t.me/SentrixCommunity
