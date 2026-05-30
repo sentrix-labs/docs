@@ -35,7 +35,9 @@ All slash amounts are **basis points** (1 bp = 0.01%, so 100 bp = 1%).
 | Slash on jail | **10 bp = 0.1%** of self-stake | `DOWNTIME_SLASH_BP` in `liveness.rs:67` |
 | Jail duration | 600 blocks (10 min @ 1s) | `DOWNTIME_JAIL_BLOCKS` in `liveness.rs:77` |
 
-Validator must sign ≥30% of blocks in any rolling 4-hour window. If signed-blocks-in-window drops below 4,320, validator is jailed for 10 minutes + slashed 0.1% of self-stake. After jail expires, validator must submit `StakingOp::Unjail` to rejoin the active set.
+Validator must sign ≥30% of blocks in any rolling 4-hour window. If signed-blocks-in-window drops below 4,320, validator is jailed for 10 minutes + slashed 0.1% of self-stake. After jail expires, validator submits `StakingOp::Unjail` (or `sentrix staking unjail` via CLI — see [Staking CLI](../operations/staking-cli.md)) to rejoin the active set.
+
+> If a downtime slash brings `self_stake` below `MIN_SELF_STAKE` (15,000 SRX), the dispatcher's floor check rejects plain `Unjail`. Recovery requires `StakingOp::AddSelfStake` first (top up back above the floor), then `Unjail`. See [Staking CLI](../operations/staking-cli.md) for the procedure.
 
 Real-world downtime tolerance:
 - Weekly 10-min deploy → 0.07% downtime (absorbed)
